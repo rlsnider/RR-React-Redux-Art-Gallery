@@ -3,6 +3,7 @@ import { useSelector, useDispatch, connect } from 'react-redux'
 import { clearData, fetchData, incrementId, decrementId, inputId } from './features/dataSlice'
 import { useEffect } from 'react';
 
+
 function App(props) {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.data)
@@ -22,7 +23,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <div>
+      <div className="App">
         <button onClick={() => dispatch(fetchData())}>Thunk!</button>
         <button onClick={() => dispatch(clearData())}>Clear</button>
         <button onClick={() => dispatch(incrementId())}>Next</button>
